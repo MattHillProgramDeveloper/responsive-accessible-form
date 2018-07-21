@@ -10,7 +10,123 @@
 </head>
 
 <body>
-    Test Change One
+    <form action="get">
+        <section>
+            <fieldset>
+                <legend>Product Name</legend>
+                <img src="images/CatBlack.jpg" alt="Picture of the currently selected cat.">
+                <h2>$20.00</h2>
+            </fieldset>
+            <fieldset>
+                <legend>Select a size</legend>
+                <p>
+                    <input type="radio" name="size" id="size_small" value="small">
+                    <label for="size_small">Small</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="size_medium" value="medium">
+                    <label for="size_medium">Medium</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="size_large" value="large">
+                    <label for="size_large">Large</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Select a color</legend>
+                <p>
+                    <label for="black">Black Cat</label>
+                    <input type="radio" name="color" id="black" value="black">
+
+                </p>
+                <p>
+                    <label for="orange">Orange Cat</label>
+                    <input type="radio" name="color" id="orange" value="orange">
+
+                </p>
+                <p>
+                    <label for="grey">Grey Cat</label>
+                    <input type="radio" name="color" id="grey" value="grey">
+
+                </p>
+                <p>
+                    <label for="calico">Calico Cat</label>
+                    <input type="radio" name="color" id="calico" value="calico">
+
+                </p>
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Shipping Details</legend>
+                <p>
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name">
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </p>
+                <p>
+                    <label for="address1">Address</label>
+                    <input type="text" name="address1" id="address1">
+                </p>
+                <p>
+                    <label for="address2">Address2</label>
+                    <input type="text" name="address2" id="address2">
+                </p>
+                <p>
+                    <label for="city">City</label>
+                    <input type="text" name="city" id="city">
+                </p>
+                <p>
+                    <label for="state">State</label>
+                    <input type="text" name="state" id="state">
+                </p>
+                <p>
+                    <label for="zipcode">Zip Code</label>
+                    <input type="text" name="zipcode" id="zipcode">
+                </p>
+                <p>
+                    <label for="country">Country</label>
+                    <select name="country" id="country">
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Mexico">Mexico</option>
+                    </select>
+                </p>
+
+            </fieldset>
+        </section>
+        <section>
+            <fieldset>
+                <legend>Order Summary</legend>
+                <div>
+                    <p>Product Name</p>
+                    <p>$20.00</p>
+                </div>
+                <hr>
+                <div>
+                <p>Shipping</p>
+                <p>Free</p>
+                <p>Total</p>
+                <p>$20.00</p>
+                </div>
+                <hr>
+                <div>
+                    <h2>Shipping Address</h2>
+                    <p id="username"></p>
+                    <p id="useraddress"></p>
+                    <p id="useraddress2"></p>
+                    <p id="citystatezip"></p>
+                </div>
+            </fieldset>
+            
+        </section>
+
+
+
+    </form>
 </body>
 
 </html>
