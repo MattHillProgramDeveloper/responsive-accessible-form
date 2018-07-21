@@ -1,0 +1,106 @@
+body{
+  @extend %zero-edges;
+  font-family: $fontstack;
+}
+fieldset{
+  @extend %zero-edges;
+  padding:10px;
+}
+form{
+  @extend %zero-edges;
+  width: 100%;
+  display: flex;
+  section{
+    display:block;
+    width: 34%;
+
+    img{
+      width:100%;
+    }
+  }
+
+  section:nth-child(1){
+    background-color: white;
+  }
+
+  section:nth-child(2){
+    background-color: rgb(245, 245, 245);
+  }
+
+  section:nth-child(3){
+    background-color: rgb(235, 235, 235);
+    padding-right: 0;
+  }
+
+}
+
+legend{
+  @include font-color-size($backgroundgrey,$medfont, inherit);
+}
+
+fieldset:first-child{
+  margin-top: 10px;
+  legend{
+    
+    @include font-color-size($backgroundgrey,$largefont, inherit);
+
+  }
+}
+
+#summary{
+
+  div{
+    overflow: auto;
+    p:nth-child(odd){
+      float: left;
+      clear: left;
+    }
+    p:nth-child(even){
+      float: right;
+      clear: right;
+    }
+  }
+
+}
+
+#shipping{
+  overflow: auto;
+  p{
+    float: left;
+    overflow: visible;
+  }
+
+  label{
+    float: left;
+    @include font-color-size($backgroundgrey,$medfont,bold);
+  }
+
+  input{
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(205, 205, 205);
+    @include font-color-size($backgroundgrey,$typingfont,bold);
+  }
+  select{
+    display:block;
+  }
+
+  .half{
+    display: block;
+    width: 45%;
+    margin-right: 5%;
+  }
+
+  .third{
+    display: block;
+    width: 25%;
+    margin-right: 5%;
+  }
+
+
+
+}
+
+

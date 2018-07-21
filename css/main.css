@@ -1,7 +1,86 @@
+body, fieldset, form {
+  margin: 0;
+  border: 0;
+  padding: 0; }
+
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; }
+
+fieldset {
+  padding: 10px; }
+
+form {
+  width: 100%;
+  display: flex; }
+  form section {
+    display: block;
+    width: 34%; }
+    form section img {
+      width: 100%; }
+  form section:nth-child(1) {
+    background-color: white; }
+  form section:nth-child(2) {
+    background-color: whitesmoke; }
+  form section:nth-child(3) {
+    background-color: #ebebeb;
+    padding-right: 0; }
+
+legend {
+  color: #333333;
+  font-size: 16px;
+  font-weight: inherit; }
+
+fieldset:first-child {
+  margin-top: 10px; }
+  fieldset:first-child legend {
+    color: #333333;
+    font-size: 24px;
+    font-weight: inherit; }
+
+#summary div {
+  overflow: auto; }
+  #summary div p:nth-child(odd) {
+    float: left;
+    clear: left; }
+  #summary div p:nth-child(even) {
+    float: right;
+    clear: right; }
+
+#shipping {
+  overflow: auto; }
+  #shipping p {
+    float: left;
+    overflow: visible; }
+  #shipping label {
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold; }
+  #shipping input {
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: #ebebeb;
+    border: 1px solid #cdcdcd;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold; }
+  #shipping select {
+    display: block; }
+  #shipping .half {
+    display: block;
+    width: 45%;
+    margin-right: 5%; }
+  #shipping .third {
+    display: block;
+    width: 25%;
+    margin-right: 5%; }
+
 .button {
   padding: 1em;
   color: #333333;
   font-size: 1em;
+  font-weight: bold;
   background-color: orange;
   font-weight: bold;
   border: none;

@@ -8,9 +8,10 @@
 
 
 //mixin for fonts
-@mixin font-color-size($thisColor, $size){
+@mixin font-color-size($thisColor, $size, $weight){
     color: $thisColor;
     font-size: $size;
+    font-weight: $weight;
 }
 
 @mixin mq($size){

@@ -57,7 +57,7 @@
             </fieldset>
         </section>
         <section>
-            <fieldset>
+            <fieldset id="shipping">
                 <legend>Shipping Details</legend>
                 <p>
                     <label for="name">Full Name</label>
@@ -67,24 +67,24 @@
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email">
                 </p>
-                <p>
+                <p class="half">
                     <label for="address1">Address</label>
                     <input type="text" name="address1" id="address1">
                 </p>
-                <p>
-                    <label for="address2">Address2</label>
+                <p class="half">
+                    <label for="address2">Address 2</label>
                     <input type="text" name="address2" id="address2">
                 </p>
-                <p>
+                <p class="third">
                     <label for="city">City</label>
                     <input type="text" name="city" id="city">
                 </p>
-                <p>
+                <p class="third">
                     <label for="state">State</label>
                     <input type="text" name="state" id="state">
                 </p>
-                <p>
-                    <label for="zipcode">Zip Code</label>
+                <p class="third">
+                    <label for="zipcode">Zip</label>
                     <input type="text" name="zipcode" id="zipcode">
                 </p>
                 <p>
@@ -99,11 +99,12 @@
             </fieldset>
         </section>
         <section>
-            <fieldset>
+            <fieldset id="summary">
                 <legend>Order Summary</legend>
                 <div>
                     <p>Product Name</p>
                     <p>$20.00</p>
+                    
                 </div>
                 <hr>
                 <div>
@@ -111,8 +112,9 @@
                 <p>Free</p>
                 <p>Total</p>
                 <p>$20.00</p>
+                
                 </div>
-                <hr>
+               <hr>
                 <div>
                     <h2>Shipping Address</h2>
                     <p id="username"></p>

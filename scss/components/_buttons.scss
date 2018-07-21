@@ -1,6 +1,6 @@
 .button {
     padding: 1em;
-    @include font-color-size($backgroundgrey,1em);
+    @include font-color-size($backgroundgrey,1em, bold);
     background-color: $mainorange;
     font-weight: bold;
     border: none;
