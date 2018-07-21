@@ -1,0 +1,26 @@
+//mixin for borders
+@mixin borders($topLeft, $topRight, $bottomRight, $bottomLeft) {
+    border-top-left-radius: $topLeft;
+    border-top-right-radius: $topRight;
+    border-bottom-left-radius: $bottomLeft;
+    border-bottom-right-radius: $bottomRight;
+}
+
+
+//mixin for fonts
+@mixin font-color-size($thisColor, $size){
+    color: $thisColor;
+    font-size: $size;
+}
+
+@mixin mq($size){
+    @if $size == small {
+        @media (min-width:300px) {@content;}
+    }
+    @else if $size == medium {
+        @media (min-width:400px) {@content;}
+    }
+    @else if $size == large {
+        @media (min-width:612px) {@content;}
+    }
+}

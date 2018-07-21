@@ -1,0 +1,17 @@
+.button {
+    padding: 1em;
+    @include font-color-size($backgroundgrey,1em);
+    background-color: $mainorange;
+    font-weight: bold;
+    border: none;
+    display: inline-block;
+    transition: border-radius 0.5s, background-color 0.5s;
+    @include borders(6px,6px,6px,6px);
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: none;
+      background-color: $mainlightgrey;
+      @include borders(8px,8px,8px,8px);
+    }
+  }
