@@ -62,13 +62,14 @@
     margin: 10px;
     border: none;
     width: 95%;
+    @include font-color-size($grey1, 1.5em, bold);
     @include mq(medium){
       width: 88%;
     }
     @include mq(large){
-      margin: 150px 10px 0 10px;
+      margin: 225px 10px 0 10px;
     }
     @include mq(largest){
-      margin: 300px 10px 0 10px;
+      margin: 400px 10px 0 10px;
     }
 }
