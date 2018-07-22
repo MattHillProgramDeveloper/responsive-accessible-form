@@ -1,4 +1,4 @@
-body, fieldset, form, #summary #address p, #price {
+body, fieldset, form, #summary #address p, #price, #hiddenheader {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -135,6 +135,33 @@ fieldset:first-child {
 
 hr {
   margin: 0; }
+
+.disappear {
+  visibility: hidden;
+  width: 0px; }
+
+.ordercomplete {
+  visibility: visible !important;
+  background-color: #EEEEEE !important;
+  margin: auto; }
+
+h1.ordercomplete {
+  font-size: 3em !important; }
+
+#hiddenheader {
+  visibility: hidden;
+  color: #333333;
+  font-size: 0;
+  font-weight: bold;
+  width: 30%;
+  margin: auto; }
+
+#checkmark {
+  visibility: hidden;
+  float: left;
+  margin: 50px 0 0 35%;
+  clear: both;
+  width: 30%; }
 
 input[type="radio"] {
   display: none; }

@@ -269,11 +269,21 @@ elsubmit.addEventListener("click", (event) => {
         })
     }
     if(errorcount === 0){
-        alert("form submitted")
+        completeOrder();
+
     }
 });
 
-
+function completeOrder(){
+    document.querySelector("#section1").classList.add("disappear");
+    document.querySelector("#section2").classList.add("disappear");
+    document.querySelector("#submit").classList.add("disappear");
+    document.querySelector("#section3").classList.add("ordercomplete");
+    document.querySelector("body").classList.add("ordercomplete");
+    document.querySelector("#checkmark").classList.add("ordercomplete");
+    document.querySelector("#summary").classList.add("ordercomplete");
+    document.querySelector("#hiddenheader").classList.add("ordercomplete");
+}
 
 /*
 End validating user input

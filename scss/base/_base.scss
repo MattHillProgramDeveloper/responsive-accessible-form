@@ -47,6 +47,7 @@ form{
 
 }
 
+
 legend{
   @include font-color-size($grey5,$medfont, inherit);
 
@@ -184,4 +185,37 @@ fieldset:first-child{
 
 hr{
   margin:0;
+}
+
+.disappear{
+  visibility: hidden;
+  width:0px;
+}
+
+
+
+.ordercomplete{
+  visibility: visible !important;
+  background-color: $grey1 !important;
+  margin: auto;
+}
+
+h1.ordercomplete{
+  font-size: 3em !important;
+}
+
+#hiddenheader{
+  visibility: hidden;
+  @include font-color-size($grey5, 0, bold);
+  @extend %zero-edges;
+  width:30%;
+  margin: auto;
+}
+
+#checkmark{
+  visibility: hidden;
+  float: left;
+  margin:50px 0 0 35%;
+  clear: both;
+  width: 30%;
 }
