@@ -93,7 +93,12 @@ fieldset:first-child{
     @include font-color-size($backgroundgrey,$typingfont,bold);
   }
   select{
-    display:block;
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid rgb(205, 205, 205);
+    @include font-color-size($backgroundgrey,$typingfont,bold);
   }
 
   .half{
@@ -112,4 +117,51 @@ fieldset:first-child{
 
 }
 
+.error{
+  color: red;
+  @extend %zero-edges;
+}
 
+.clearleft{
+  clear: left;
+}
+
+input[type="radio"]:checked+label{
+  border: solid orange 5px;
+}
+
+input[name="size"], input[name="color"]{
+  display: none;
+}
+
+input[name="size"]+label{
+
+  padding:10px;
+  display: block;
+  width: 20%;
+  background-color: grey;
+  margin: 1em;
+
+}
+
+.sizeflex{
+  display: flex;
+  justify-content: space-between;
+  p{
+    @extend %center-text;
+    @extend %zero-edges;
+
+  }
+}
+
+.colorflex{
+  display: flex;
+  justify-content: space-between;
+  p{
+    @extend %center-text;
+    padding:10px;
+    display: block;
+    width: 20%;
+    margin: 1em;
+  }
+}

@@ -1,4 +1,7 @@
-body, fieldset, form, #summary #address p {
+.sizeflex p, .colorflex p {
+  text-align: center; }
+
+body, fieldset, form, #summary #address p, .error, .sizeflex p {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -72,7 +75,14 @@ fieldset:first-child {
     font-size: 20px;
     font-weight: bold; }
   #shipping select {
-    display: block; }
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: #ebebeb;
+    border: 1px solid #cdcdcd;
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold; }
   #shipping .half {
     display: block;
     width: 45%;
@@ -81,6 +91,38 @@ fieldset:first-child {
     display: block;
     width: 25%;
     margin-right: 5%; }
+
+.error {
+  color: red; }
+
+.clearleft {
+  clear: left; }
+
+input[type="radio"]:checked + label {
+  border: solid orange 5px; }
+
+input[name="size"], input[name="color"] {
+  display: none; }
+
+input[name="size"] + label {
+  padding: 10px;
+  display: block;
+  width: 20%;
+  background-color: grey;
+  margin: 1em; }
+
+.sizeflex {
+  display: flex;
+  justify-content: space-between; }
+
+.colorflex {
+  display: flex;
+  justify-content: space-between; }
+  .colorflex p {
+    padding: 10px;
+    display: block;
+    width: 20%;
+    margin: 1em; }
 
 .button {
   padding: 1em;
