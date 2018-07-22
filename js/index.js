@@ -77,6 +77,7 @@ elradbtncalico.addEventListener('change', function () {
 
 elradbtnsmall.addEventListener('change', function () {
     changeProduct();
+    
 }, false);
 
 elradbtnmeduim.addEventListener('change', function () {
