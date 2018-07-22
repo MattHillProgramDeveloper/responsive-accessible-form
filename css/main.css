@@ -1,4 +1,4 @@
-body, fieldset, form {
+body, fieldset, form, #summary #address p {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -45,6 +45,12 @@ fieldset:first-child {
   #summary div p:nth-child(even) {
     float: right;
     clear: right; }
+
+#summary #address {
+  overflow: auto; }
+  #summary #address p {
+    float: left;
+    clear: left; }
 
 #shipping {
   overflow: auto; }

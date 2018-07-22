@@ -61,6 +61,15 @@ fieldset:first-child{
     }
   }
 
+  #address{
+    overflow: auto;
+    p{
+      @extend %zero-edges;
+      float: left;
+      clear: left;
+    }
+  }
+
 }
 
 #shipping{
