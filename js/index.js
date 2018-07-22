@@ -61,31 +61,56 @@ function changeProduct() {
 //cat type event listeners
 elradbtnblack.addEventListener('change', function () {
     changeProduct();
+    document.querySelector("#blacklabel").setAttribute('aria-checked','true');
+    document.querySelector("#orangelabel").setAttribute('aria-checked','false');
+    document.querySelector("#greylabel").setAttribute('aria-checked','false');
+    document.querySelector("#calicolabel").setAttribute('aria-checked','false');
 }, false);
 
 elradbtnorange.addEventListener('change', function () {
     changeProduct();
+    document.querySelector("#blacklabel").setAttribute('aria-checked','false');
+    document.querySelector("#orangelabel").setAttribute('aria-checked','true');
+    document.querySelector("#greylabel").setAttribute('aria-checked','false');
+    document.querySelector("#calicolabel").setAttribute('aria-checked','false');
 }, false);
 
 elradbtngrey.addEventListener('change', function () {
     changeProduct();
+    document.querySelector("#blacklabel").setAttribute('aria-checked','false');
+    document.querySelector("#orangelabel").setAttribute('aria-checked','false');
+    document.querySelector("#greylabel").setAttribute('aria-checked','true');
+    document.querySelector("#calicolabel").setAttribute('aria-checked','false');
 }, false);
 
 elradbtncalico.addEventListener('change', function () {
     changeProduct();
+    document.querySelector("#blacklabel").setAttribute('aria-checked','false');
+    document.querySelector("#orangelabel").setAttribute('aria-checked','false');
+    document.querySelector("#greylabel").setAttribute('aria-checked','false');
+    document.querySelector("#calicolabel").setAttribute('aria-checked','true');
 }, false);
 
 elradbtnsmall.addEventListener('change', function () {
     changeProduct();
-    
+    document.querySelector("#smallrdlbl").setAttribute('aria-checked','true');
+    document.querySelector("#medrdlbl").setAttribute('aria-checked','false');
+    document.querySelector("#largerdlbl").setAttribute('aria-checked','false');
 }, false);
 
 elradbtnmeduim.addEventListener('change', function () {
     changeProduct();
+    document.querySelector("#smallrdlbl").setAttribute('aria-checked','false');
+    document.querySelector("#medrdlbl").setAttribute('aria-checked','true');
+    document.querySelector("#largerdlbl").setAttribute('aria-checked','false');
 }, false);
 
 elradbtnlarge.addEventListener('change', function () {
     changeProduct();
+    document.querySelector("#smallrdlbl").setAttribute('aria-checked','false');
+    document.querySelector("#medrdlbl").setAttribute('aria-checked','false');
+    document.querySelector("#largerdlbl").setAttribute('aria-checked','true');
+    
 }, false);
 
 
@@ -123,7 +148,6 @@ Begin validating user input
 function removeErrors() {
     let allErrors = document.getElementsByClassName("error");
     while (allErrors[0]) {
-        console.log("removing " + allErrors[0]);
         allErrors[0].parentElement.removeChild(allErrors[0]);
     }
 }
@@ -197,7 +221,6 @@ elsubmit.addEventListener("click", (event) => {
     if (nameErrors.length > 0) {
         errorcount++;
         nameErrors.forEach((err) => {
-            console.log(err);
             elname.insertAdjacentHTML('afterend', "<p class='error'>" + err + "</p>")
         })
     }
@@ -209,7 +232,6 @@ elsubmit.addEventListener("click", (event) => {
     if (addressErrors.length > 0) {
         errorcount++;
         addressErrors.forEach((err) => {
-            console.log(err);
             eladdress1.insertAdjacentHTML('afterend', "<p class='error'>" + err + "</p>")
         })
     }
@@ -221,7 +243,6 @@ elsubmit.addEventListener("click", (event) => {
     if (cityErrors.length > 0) {
         errorcount++;
         cityErrors.forEach((err) => {
-            console.log(err);
             elcity.insertAdjacentHTML('afterend', "<p class='error'>" + err + "</p>")
         })
     }
@@ -233,7 +254,6 @@ elsubmit.addEventListener("click", (event) => {
     if (stateErrors.length > 0) {
         errorcount++;
         stateErrors.forEach((err) => {
-            console.log(err);
             elstate.insertAdjacentHTML('afterend', "<p class='error'>" + err + "</p>")
         })
     }
@@ -245,7 +265,6 @@ elsubmit.addEventListener("click", (event) => {
     if (zipErrors.length > 0) {
         errorcount++;
         zipErrors.forEach((err) => {
-            console.log(err);
             elzipcode.insertAdjacentHTML('afterend', "<p class='error'>" + err + "</p>")
         })
     }
