@@ -1,4 +1,4 @@
-body, fieldset, form, #summary #address p, .error, #price {
+body, fieldset, form, #summary #address p, #price {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -64,6 +64,11 @@ fieldset:first-child {
   #summary #address p {
     float: left;
     clear: left; }
+  #summary #address p:first-child {
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 0 10px 0; }
 
 #shipping {
   overflow: auto; }
@@ -104,7 +109,9 @@ fieldset:first-child {
     margin-right: 5%; }
 
 .error {
-  color: red; }
+  color: #a30000;
+  font-weight: 900;
+  padding: 2px; }
 
 .clearleft {
   clear: left; }
@@ -121,7 +128,7 @@ fieldset:first-child {
   clear: right; }
 
 .transp50 {
-  opacity: .5; }
+  opacity: .75; }
 
 #cost p {
   margin: .5em 0; }
@@ -173,11 +180,10 @@ input[name="color"] + label {
   color: #AAAAAA; }
 
 input[type="radio"]:checked + label {
-  border: solid #3ad32c 3px; }
+  border: solid #258d1b 3px; }
 
 input[type="submit"] {
-  color: #EEEEEE;
-  background-color: #3ad32c;
+  background-color: #258d1b;
   padding: 20px;
   margin: 10px;
   border: none;

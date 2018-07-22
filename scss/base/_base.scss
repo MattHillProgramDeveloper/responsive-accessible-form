@@ -93,6 +93,10 @@ fieldset:first-child{
       float: left;
       clear: left;
     }
+    p:first-child{
+      @include font-color-size($grey5,$largefont,bold);
+      padding: 0 0 10px 0;
+    }
   }
 
 }
@@ -145,8 +149,9 @@ fieldset:first-child{
 }
 
 .error{
-  color: red;
-  @extend %zero-edges;
+  color: rgb(163, 0, 0);
+  font-weight: 900;
+  padding: 2px;
 }
 
 .clearleft{
@@ -168,7 +173,7 @@ fieldset:first-child{
 
 
 .transp50{
-  opacity: .5;
+  opacity: .75;
 }
 
 #cost{

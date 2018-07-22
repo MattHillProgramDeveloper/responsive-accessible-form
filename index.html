@@ -17,20 +17,20 @@
                 <img src="images/CatBlack.jpg" alt="Picture of a black cat" id="productimage">
                 <p id="price">$20.00</p>
             </fieldset>
-            <fieldset>
+            <fieldset role="radiogroup">
                 <legend>Select a size</legend>
                 <div class="flexcontainer">
                 <p class="btn btngeneric">
                     <input type="radio" name="size" id="size_small" value="Small" checked="checked">
-                    <label for="size_small">S</label>
+                    <label for="size_small" role="radio" aria-checked="true">S</label>
                 </p>
                 <p class="btn btngeneric">
                     <input type="radio" name="size" id="size_medium" value="Medium">
-                    <label for="size_medium">M</label>
+                    <label for="size_medium" role="radio" aria-checked="false">M</label>
                 </p>
                 <p class="btn btngeneric">
                     <input type="radio" name="size" id="size_large" value="Large">
-                    <label for="size_large">L</label>
+                    <label for="size_large" role="radio" aria-checked="false">L</label>
                 </p>
                 </div>
 
@@ -367,7 +367,7 @@
                 </div>
                <hr>
                 <div id="address">
-                    <h2>Shipping Address</h2>
+                    <p>Shipping Address</p>
                     <p id="username">Sarah Smith</p>
                     <p id="useraddress">23412 S University Ave</p>
                     <p id="useraddress2"></p>
