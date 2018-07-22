@@ -1,7 +1,4 @@
-.sizeflex p, .colorflex p {
-  text-align: center; }
-
-body, fieldset, form, #summary #address p, .error, .sizeflex p {
+body, fieldset, form, #summary #address p, .error, #price {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -13,32 +10,45 @@ fieldset {
   padding: 10px; }
 
 form {
-  width: 100%;
-  display: flex; }
+  width: 100%; }
+  @media (min-width: 600px) {
+    form {
+      display: flex; } }
   form section {
-    display: block;
-    width: 34%; }
+    float: left;
+    clear: left;
+    width: 100%; }
+    @media (min-width: 600px) {
+      form section {
+        display: block;
+        width: 34%; } }
     form section img {
       width: 100%; }
   form section:nth-child(1) {
-    background-color: white; }
+    background-color: #EEEEEE; }
   form section:nth-child(2) {
-    background-color: whitesmoke; }
+    background-color: #DDDDDD; }
   form section:nth-child(3) {
-    background-color: #ebebeb;
+    background-color: #CCCCCC;
     padding-right: 0; }
 
 legend {
   color: #333333;
   font-size: 16px;
   font-weight: inherit; }
+  @media (min-width: 600px) {
+    legend {
+      font-size: 20px; } }
 
 fieldset:first-child {
   margin-top: 10px; }
   fieldset:first-child legend {
     color: #333333;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: inherit; }
+    @media (min-width: 600px) {
+      fieldset:first-child legend {
+        font-size: 24px; } }
 
 #summary div {
   overflow: auto; }
@@ -58,6 +68,7 @@ fieldset:first-child {
 #shipping {
   overflow: auto; }
   #shipping p {
+    margin: .5em 0;
     float: left;
     overflow: visible; }
   #shipping label {
@@ -69,19 +80,19 @@ fieldset:first-child {
     width: 100%;
     float: left;
     display: block;
-    background-color: #ebebeb;
-    border: 1px solid #cdcdcd;
+    background-color: #CCCCCC;
+    border: 1px solid #BBBBBB;
     color: #333333;
-    font-size: 20px;
-    font-weight: bold; }
+    font-size: 14px;
+    font-weight: normal; }
   #shipping select {
     width: 100%;
     float: left;
     display: block;
-    background-color: #ebebeb;
-    border: 1px solid #cdcdcd;
+    background-color: #CCCCCC;
+    border: 1px solid #BBBBBB;
     color: #333333;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold; }
   #shipping .half {
     display: block;
@@ -98,51 +109,85 @@ fieldset:first-child {
 .clearleft {
   clear: left; }
 
-input[type="radio"]:checked + label {
-  border: solid orange 5px; }
+.flexcontainer {
+  display: flex;
+  justify-content: space-between; }
 
-input[name="size"], input[name="color"] {
+#price {
+  color: #333333;
+  font-size: 1.5em;
+  font-weight: bold;
+  float: right;
+  clear: right; }
+
+.transp50 {
+  opacity: .5; }
+
+#cost p {
+  margin: .5em 0; }
+
+hr {
+  margin: 0; }
+
+input[type="radio"] {
   display: none; }
 
 input[name="size"] + label {
-  padding: 10px;
-  display: block;
-  width: 20%;
-  background-color: grey;
-  margin: 1em; }
+  background-color: #CCCCCC;
+  border: solid #EEEEEE 3px;
+  padding: 1em 3em; }
+  @media (min-width: 600px) {
+    input[name="size"] + label {
+      padding: .25em 1.25em; } }
+  @media (min-width: 800px) {
+    input[name="size"] + label {
+      padding: .5em 2em; } }
+  @media (min-width: 1032px) {
+    input[name="size"] + label {
+      padding: 1.5em 3em; } }
 
-.sizeflex {
-  display: flex;
-  justify-content: space-between; }
+input[name="color"] + label {
+  padding: .75em 2.25em;
+  border: solid #EEEEEE 3px; }
+  @media (min-width: 600px) {
+    input[name="color"] + label {
+      padding: .25em 1em; } }
+  @media (min-width: 1032px) {
+    input[name="color"] + label {
+      padding: 1em 2em; } }
 
-.colorflex {
-  display: flex;
-  justify-content: space-between; }
-  .colorflex p {
-    padding: 10px;
-    display: block;
-    width: 20%;
-    margin: 1em; }
+#calicolabel {
+  background-color: #6d3f0b;
+  color: #6d3f0b; }
 
-.button {
-  padding: 1em;
-  color: #333333;
-  font-size: 1em;
-  font-weight: bold;
-  background-color: orange;
-  font-weight: bold;
+#orangelabel {
+  background-color: #f3b15c;
+  color: #f3b15c; }
+
+#blacklabel {
+  background-color: black;
+  color: black; }
+
+#greylabel {
+  background-color: #AAAAAA;
+  color: #AAAAAA; }
+
+input[type="radio"]:checked + label {
+  border: solid #3ad32c 3px; }
+
+input[type="submit"] {
+  color: #EEEEEE;
+  background-color: #3ad32c;
+  padding: 20px;
+  margin: 10px;
   border: none;
-  display: inline-block;
-  transition: border-radius 0.5s, background-color 0.5s;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-  text-decoration: none; }
-  .button:hover {
-    text-decoration: none;
-    background-color: #DDDDDD;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px; }
+  width: 95%; }
+  @media (min-width: 600px) {
+    input[type="submit"] {
+      width: 88%; } }
+  @media (min-width: 800px) {
+    input[type="submit"] {
+      margin: 150px 10px 0 10px; } }
+  @media (min-width: 1032px) {
+    input[type="submit"] {
+      margin: 300px 10px 0 10px; } }

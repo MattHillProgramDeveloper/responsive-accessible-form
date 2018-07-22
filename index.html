@@ -15,48 +15,48 @@
             <fieldset>
                 <legend id="productlegend">Small Black Cat</legend>
                 <img src="images/CatBlack.jpg" alt="Picture of a black cat" id="productimage">
-                <h2>$20.00</h2>
+                <p id="price">$20.00</p>
             </fieldset>
             <fieldset>
                 <legend>Select a size</legend>
-                <div class="sizeflex">
-                <p>
+                <div class="flexcontainer">
+                <p class="btn btngeneric">
                     <input type="radio" name="size" id="size_small" value="Small" checked="checked">
-                    <label for="size_small">Small</label>
+                    <label for="size_small">S</label>
                 </p>
-                <p>
+                <p class="btn btngeneric">
                     <input type="radio" name="size" id="size_medium" value="Medium">
-                    <label for="size_medium">Medium</label>
+                    <label for="size_medium">M</label>
                 </p>
-                <p>
+                <p class="btn btngeneric">
                     <input type="radio" name="size" id="size_large" value="Large">
-                    <label for="size_large">Large</label>
+                    <label for="size_large">L</label>
                 </p>
                 </div>
 
             </fieldset>
             <fieldset>
                 <legend>Select a color</legend>
-                <div class="colorflex">
+                <div class="flexcontainer">
                 <p>
-                    <label for="black">Black</label>
+                    
                     <input type="radio" name="color" id="black" value="Black" checked="checked">
-
+<label id="blacklabel" for="black">x</label>
                 </p>
                 <p>
-                    <label for="orange">Orange</label>
+                    
                     <input type="radio" name="color" id="orange" value="Orange">
-
+<label id="orangelabel" for="orange">x</label>
                 </p>
                 <p>
-                    <label for="grey">Grey</label>
+                    
                     <input type="radio" name="color" id="grey" value="Grey">
-
+<label id="greylabel" for="grey">x</label>
                 </p>
                 <p>
-                    <label for="calico">Calico</label>
+                    
                     <input type="radio" name="color" id="calico" value="Calico">
-
+<label id="calicolabel" for="calico">x</label>
                 </p>
                 </div>
             </fieldset>
@@ -358,9 +358,9 @@
                     
                 </div>
                 <hr>
-                <div>
-                <p>Shipping</p>
-                <p>Free</p>
+                <div id="cost">
+                <p class="transp50">Shipping</p>
+                <p class="transp50">Free</p>
                 <p>Total</p>
                 <p>$20.00</p>
                 
@@ -373,9 +373,14 @@
                     <p id="useraddress2"></p>
                     <p id="citystatezip">Winter Park, FL 32792</p>
                     <p id="shipcountry"></p>
+                    
                 </div>
+                <div class=bottom>
+                    <input type="submit" name="submit" id="submit">
+                </div>
+                
             </fieldset>
-             <input type="submit" name="submit" id="submit">
+
         </section>
 
 

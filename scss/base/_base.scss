@@ -9,10 +9,23 @@ fieldset{
 form{
   @extend %zero-edges;
   width: 100%;
-  display: flex;
+  @include mq(medium){
+    display: flex;
+  }
+
+  
   section{
-    display:block;
-    width: 34%;
+
+    float: left;
+    clear: left;
+    width: 100%;
+    @include mq(medium){
+
+      display:block;
+      width: 34%;
+    }
+
+
 
     img{
       width:100%;
@@ -20,29 +33,41 @@ form{
   }
 
   section:nth-child(1){
-    background-color: white;
+    background-color: $grey1;
   }
 
   section:nth-child(2){
-    background-color: rgb(245, 245, 245);
+    background-color:$grey2;
   }
 
   section:nth-child(3){
-    background-color: rgb(235, 235, 235);
+    background-color: $grey3;
     padding-right: 0;
   }
 
 }
 
 legend{
-  @include font-color-size($backgroundgrey,$medfont, inherit);
+  @include font-color-size($grey5,$medfont, inherit);
+
+  @include mq(medium){
+    font-size: $largefont;
+  }
+
+}
+fieldset{
+  @extend %zero-edges;
 }
 
 fieldset:first-child{
   margin-top: 10px;
   legend{
     
-    @include font-color-size($backgroundgrey,$largefont, inherit);
+    @include font-color-size($grey5,$largefont, inherit);
+
+    @include mq(medium){
+      font-size: $largestfont;
+    }
 
   }
 }
@@ -75,30 +100,32 @@ fieldset:first-child{
 #shipping{
   overflow: auto;
   p{
+    margin: .5em 0;
     float: left;
     overflow: visible;
   }
 
   label{
     float: left;
-    @include font-color-size($backgroundgrey,$medfont,bold);
+    @include font-color-size($grey5,$medfont,bold);
   }
 
   input{
     width: 100%;
     float: left;
     display: block;
-    background-color: rgb(235, 235, 235);
-    border: 1px solid rgb(205, 205, 205);
-    @include font-color-size($backgroundgrey,$typingfont,bold);
+    background-color: $grey3;
+    border: 1px solid $grey4;
+    @include font-color-size($grey5,$smallfont,normal);
+
   }
   select{
     width: 100%;
     float: left;
     display: block;
-    background-color: rgb(235, 235, 235);
-    border: 1px solid rgb(205, 205, 205);
-    @include font-color-size($backgroundgrey,$typingfont,bold);
+    background-color: $grey3;
+    border: 1px solid $grey4;
+    @include font-color-size($grey5,$medfont,bold);
   }
 
   .half{
@@ -126,42 +153,30 @@ fieldset:first-child{
   clear: left;
 }
 
-input[type="radio"]:checked+label{
-  border: solid orange 5px;
-}
-
-input[name="size"], input[name="color"]{
-  display: none;
-}
-
-input[name="size"]+label{
-
-  padding:10px;
-  display: block;
-  width: 20%;
-  background-color: grey;
-  margin: 1em;
-
-}
-
-.sizeflex{
+.flexcontainer{
   display: flex;
   justify-content: space-between;
-  p{
-    @extend %center-text;
-    @extend %zero-edges;
 
-  }
 }
 
-.colorflex{
-  display: flex;
-  justify-content: space-between;
-  p{
-    @extend %center-text;
-    padding:10px;
-    display: block;
-    width: 20%;
-    margin: 1em;
-  }
+#price{
+  @include font-color-size($grey5, 1.5em, bold);
+  float:right;
+  clear:right;
+  @extend %zero-edges;
+}
+
+
+.transp50{
+  opacity: .5;
+}
+
+#cost{
+    p{
+      margin: .5em 0;
+    }
+}
+
+hr{
+  margin:0;
 }
