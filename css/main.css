@@ -138,7 +138,8 @@ hr {
 
 .disappear {
   visibility: hidden;
-  width: 0px; }
+  width: 0px;
+  height: 0px; }
 
 .ordercomplete {
   visibility: visible !important;
@@ -146,7 +147,7 @@ hr {
   margin: auto; }
 
 h1.ordercomplete {
-  font-size: 3em !important; }
+  font-size: 2em !important; }
 
 #hiddenheader {
   visibility: hidden;
